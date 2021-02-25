@@ -85,7 +85,7 @@ export default {
   background-color: #f2f2f2;
 }
 .profile-nav{
-      background-color: rgb(135, 206, 235);
+      background-color: #333333;
 
   color: #fff;
 /* 

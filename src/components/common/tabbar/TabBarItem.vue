@@ -5,6 +5,7 @@
     <div v-else><slot name="item-icon-active"></slot></div>
     <div :style="activeStyle"><slot name="item-text"></slot></div>
   </div>
+   
 </template>
 
 <script>
@@ -20,7 +21,7 @@
     data() {
       return {
         // isActive: true
-      }
+      } 
     },
     computed: {
       isActive() {

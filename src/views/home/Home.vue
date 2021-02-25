@@ -12,9 +12,23 @@
             @scroll="contentScroll"
             :pull-up-load="true"
             @pullingUp="loadMore">
-      <home-swiper :banners="banners" @swiperImageLoad="swiperImageLoad"/>
-      <recommend-view :recommends="recommends"/>
-      <feature-view/>
+      
+      <swiper>
+        <swiper-item> 
+        <a href="https://fast.dewu.com/nezha-plus/detail/603380699882f7077424bb60"><img src="~assets/img/home/swiper1.jpg" alt=""></a></swiper-item>
+        <swiper-item> 
+        <a href="https://fast.dewu.com/nezha-plus/detail/60157c4e0eeb2c6932045dc9
+"><img src="~assets/img/home/swiper2.jpg" alt=""></a></swiper-item>
+        <swiper-item> 
+        <a href="https://m.bzhm0z2c.cn/nezha-plus/33e6df92aaae9a0/6030e416ed843e077aa28be0"><img src="~assets/img/home/swiper3.jpg" alt=""></a></swiper-item>
+        <swiper-item> 
+        <a href="https://m.bzhm0z2c.cn/nezha-plus/aa5fdb37f868562/60307dfb5aee1f3bef889166
+"><img src="~assets/img/home/swiper4.jpg" alt=""></a></swiper-item>
+      </swiper>
+      
+      
+      <feature-view></feature-view>
+      <img src="~assets/img/home/TJ.jpg" alt="" class="TJ">
       <tab-control class="tab-control"
                    :titles="['流行', '新款', '精选']"
                    @tabClick="tabClick" 
@@ -28,7 +42,8 @@
 </template>
 
 <script>
-  import HomeSwiper from './childComps/HomeSwiper'
+import {Swiper,SwiperItem} from 'components/common/swiper'
+
   import RecommendView from './childComps/RecommendView'
   import FeatureView from './childComps/FeatureView'
 
@@ -40,17 +55,20 @@
 
   import { getHomeMultidata, getHomeGoods } from "network/home"
 
+
   export default {
     name: "Home",
     components: {
-      HomeSwiper,
       RecommendView,
       FeatureView,
       NavBar,
       TabControl,
       GoodList,
       Scroll,
-      BackTop
+      BackTop,
+      Swiper,
+      SwiperItem
+        
     },
     data() {
       return {
@@ -169,7 +187,7 @@
   }
 
   .home-nav {
-    background-color: rgb(135, 206, 235);
+    background-color:#333333;
     color: #fff;
 
     /* position: fixed;
@@ -210,4 +228,7 @@
     right: 0;
     top: 44px;
   } */
+ .TJ{
+   width: 100%;
+ }
 </style>

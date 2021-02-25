@@ -43,7 +43,7 @@
   height: 100vh;
 }
 .nav-bar{
-  background-color: skyblue;
+  background-color: #333333;
   color: #FFF;
   /* font-weight: 700; */
 }
