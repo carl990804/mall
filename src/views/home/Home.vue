@@ -29,7 +29,7 @@
       
       <feature-view></feature-view>
       <img src="~assets/img/home/TJ.jpg" alt="" class="TJ">
-      <tab-control class="tab-control"
+      <tab-control 
                    :titles="['流行', '新款', '精选']"
                    @tabClick="tabClick" 
                    ref='tabControl2' />
@@ -180,30 +180,27 @@ import {Swiper,SwiperItem} from 'components/common/swiper'
 </script>
 
 <style scoped>
-  #home {
-    /*padding-top: 44px;*/
-    height: 100vh;
-    position: relative;
-  }
-
-  .home-nav {
-    background-color:#333333;
-    color: #fff;
-
-    /* position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 9; */
-  }
+  #home{
+  /* padding-top: 44px; */
+  height: 100vh;
+  position: relative;
+}
+.home-nav{
+  background-color: #333333;
+  color: #fff;
 /* 
-  .tab-control {
-    position: sticky;
-    top: 44px;
-    z-index: 9;
-  } */
-
-  .content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9; */
+}
+.tab-control{
+  position: relative;
+  
+  z-index: 9;
+}
+.content{
     overflow: hidden;
 
     position: absolute;
@@ -211,23 +208,7 @@ import {Swiper,SwiperItem} from 'components/common/swiper'
     bottom: 49px;
     left: 0;
     right: 0;
-  }
-  .tab-control{
-    position: relative;
-    z-index: 9;
-  }
-
-  /*.content {*/
-    /*height: calc(100% - 93px);*/
-    /*overflow: hidden;*/
-    /*margin-top: 44px;*/
-  /*}*/
-  /* .fixed{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 44px;
-  } */
+}
  .TJ{
    width: 100%;
  }

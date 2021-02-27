@@ -34,7 +34,7 @@ export default {
     return {
       scroll:null,
       
-      msg: "欢迎傻逼用户使用这个垃圾软件~~~热烈庆祝傻逼软件快要完成",
+      msg: "",
       intervalId: null,
 
       categories: [],
