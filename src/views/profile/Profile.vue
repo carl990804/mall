@@ -33,7 +33,7 @@
 
     
       <list-view :list-data="orderList" class="order-list"></list-view>
-      <list-view :list-data="serviceList" class="service-list"></list-view>
+      <list-view :list-data="serviceList" class="service-list" ></list-view>
       <list-view :list-data="moreList" class="more-list"></list-view>
   </div>
 
@@ -55,7 +55,7 @@ export default {
         ],
         serviceList: [
           {icon: '#service', iconColor: '#ff8198', info: '我的购物车'},
-          {icon: '#download', iconColor: '#ff8198', info: '下载购物APP'},
+          {icon: '#download', iconColor: '#ff8198', info: '地址管理'},
         ],
         moreList:[
           {icon: '#expired', iconColor: '#ff8198', info: '设置'},
@@ -67,6 +67,9 @@ export default {
     test(){
 
 
+    },
+    gocart(){
+      this.$router.replace('/cart')
     }
   },
   components:{
